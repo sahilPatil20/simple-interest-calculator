@@ -6,5 +6,14 @@ body {
 
 .si-calculate {
     width: 500px;
-    height: 400px;
+    height: 430px;
+}
+
+input {
+    width: 400px;
+}
+
+.btn {
+    background-color: #ffdee9;
+    background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
 }
