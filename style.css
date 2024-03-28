@@ -3,3 +3,8 @@ body {
   background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
   min-height: 100vh;
 }
+
+.si-calculate {
+    width: 500px;
+    height: 400px;
+}
