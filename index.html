@@ -43,6 +43,9 @@
           id="time"
         />
       </div>
+      <p class ="fs-4 text-center" id="ans">
+        Answer : 
+      </p>
       <div>
         <button
           class="btn d-block mx-auto m-3 py-1 px-2 fs-4 fw-medium border border-dark"
@@ -62,7 +65,8 @@
 
         const si = parseFloat(input1.value) * parseFloat(input2.value) * parseFloat(input3.value) / 100 ;
 
-        console.log(si);
+        const ansElement = document.getElementById("ans");
+        ansElement.innerText = `Answer : ${si}`;
       }
     </script>
     <script
