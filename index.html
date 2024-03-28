@@ -1,35 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Interest</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <div class="si-calculate d-block mt-5 mx-auto bg-light rounded-5">
-        <h2 class="text-center fw-bold fs-3 p-3">Calculate Simple Interest</h2>
+      <h2 class="text-center fw-bold fs-3 p-3">Calculate Simple Interest</h2>
 
-        <div class="ms-4 py-1 px-2">
-            <span class="fs-5 fw-semibold">Enter Amount</span> <br>
-            <input class="border border-dark my-2 py-1 px-2 rounded-3" type="text" placeholder="enter amount">
-        </div>
-        <div class="ms-4 py-1 px-2">
-            <span class="fs-5 fw-semibold">Enter Rate</span> <br>
-            <input class="border border-dark my-2 py-1 px-2 rounded-3" type="text" placeholder="enter rate">
-        </div>
-        <div class="ms-4 py-1 px-2">
-            <span class="fs-5 fw-semibold">Enter Time</span> <br>
-            <input class="border border-dark my-2 py-1 px-2 rounded-3" type="text" placeholder="enter time">
-        </div>
-        <div>
-            <button class="btn d-block mx-auto m-3 py-1 px-2 fs-4 fw-medium border border-dark" type="button">Calculate</button>
-        </div>
+      <div class="ms-4 py-1 px-2">
+        <span class="fs-5 fw-semibold">Enter Amount</span> <br />
+        <input
+          class="border border-dark my-2 py-1 px-2 rounded-3"
+          type="text"
+          placeholder="enter amount"
+          id="amt"
+        />
+      </div>
+      <div class="ms-4 py-1 px-2">
+        <span class="fs-5 fw-semibold">Enter Rate</span> <br />
+        <input
+          class="border border-dark my-2 py-1 px-2 rounded-3"
+          type="text"
+          placeholder="enter rate"
+          id="rate"
+        />
+      </div>
+      <div class="ms-4 py-1 px-2">
+        <span class="fs-5 fw-semibold">Enter Time</span> <br />
+        <input
+          class="border border-dark my-2 py-1 px-2 rounded-3"
+          type="text"
+          placeholder="enter time"
+          id="time"
+        />
+      </div>
+      <div>
+        <button
+          class="btn d-block mx-auto m-3 py-1 px-2 fs-4 fw-medium border border-dark"
+          type="button"
+          onclick="calculate()"
+        >
+          Calculate
+        </button>
+      </div>
     </div>
 
+    <script>
+      function calculate() {
+        const input1 = document.getElementById("amt");
+        const input2 = document.getElementById("rate");
+        const input3 = document.getElementById("time");
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+        const si = parseFloat(input1.value) * parseFloat(input2.value) * parseFloat(input3.value) / 100 ;
+
+        console.log(si);
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
