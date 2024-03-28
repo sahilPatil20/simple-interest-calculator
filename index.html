@@ -46,14 +46,22 @@
       <p class ="fs-4 text-center" id="ans">
         Answer : 
       </p>
-      <div>
+      <div class="d-flex justify-content-center mb-3">
         <button
-          class="btn d-block mx-auto m-3 py-1 px-2 fs-4 fw-medium border border-secondary"
+          class="btn m-3 py-1 px-2 fs-4 fw-medium border border-secondary"
           type="button"
           onclick="calculate()"
         >
           Calculate
         </button>
+        <button
+          class="btn m-3 py-1 px-2 fs-4 fw-medium border border-secondary"
+          type="button"
+          onclick="reset()"
+        >
+          Reset
+        </button>
+
       </div>
     </div>
 
@@ -67,6 +75,20 @@
 
         const ansElement = document.getElementById("ans");
         ansElement.innerText = `Answer : ${si}`;
+      }
+
+      function reset() {
+        const input1 = document.getElementById("amt");
+        const input2 = document.getElementById("rate");
+        const input3 = document.getElementById("time");
+        const ansElement = document.getElementById("ans");
+
+        input1.value = "";
+        input2.value = "";
+        input3.value = "";
+
+        ansElement.innerText = "Answer : ";
+        
       }
     </script>
     <script
